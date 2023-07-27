@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="/typing-animation.js" async></script>
+    <script type="text/javascript" src="/mobile-nav-menu.js" async></script>
+    <title>Codey Albers Dev Portfolio</title>
+</head>
+
+<body class="dark-bg">
+    
+    <nav>
+        <a href="index.html"><img class="nav-logo" alt="Codey Design Inc Logo" src="/images/logo.svg"/></a>
+        <div class="mobile-menu-btn-container"  onclick="menuToggle()">
+            <img class="hamburger" id="hamburger" alt="menu" src="/images/menu-light.svg" />
+            <img class="close hidden" id="close" alt="close menu" src="/images/close-light.svg" />
+        </div>
+        <ul class="nav-link-container collapsed" id="mobile-menu">
+            <a href="/index.html"><li class="nav-link current">Home</li></a>
+            <a href="/resume.html"><li class="nav-link">Resume</li></a>
+            <a href="https://www.codey.design/" target="_blank"><li class="nav-link">Design</li></a>
+            <a href="/contact.html"><li class="nav-link">Contact</li></a>
+        </ul>
+    </nav>
+
+    <section class="bio">
+        <div class="h1-container">
+            <span class="grow"><h1 class="code-text" id="hello-world">Hello, world!</h1></span>
+            <div class="blinky"></div>
+        </div>
+        <p>My name is Codey, and I’m currently the UX Lead at KlimaDAO. On my eternal quest toward self-improvement, I’ve decided to dip my toes into the world of front-end development.</p>
+        <p>This is my front-end dev portfolio.</p>
+    </section>
+
+    <section class="links">
+        <div class="project-link-container">
+            <a class="project-link code-text" href="/reddit-client.html">Reddit Client</a>
+            <img class="arrow" src="/images/next-arrow.svg">
+        </div>
+        <div class="project-link-container">
+            <a class="project-link code-text" href="/workout-generator.html">Workout Generator</a>
+            <img class="arrow" src="/images/next-arrow.svg">
+        </div>
+        <div class="project-link-container">
+            <a class="project-link code-text" href="/project-template.html">Project</a>
+            <img class="arrow" src="/images/next-arrow.svg">
+        </div>        
+    </section>
+
+</body>
+</html>

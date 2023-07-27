@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="/mobile-nav-menu.js" async></script>
+    <title>Reddit Client</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html"><img class="nav-logo" alt="Codey Design Inc Logo" src="/images/dark-logo.svg"/></a>
+        <div class="mobile-menu-btn-container"  onclick="menuToggle()">
+            <img class="hamburger" id="hamburger" alt="menu" src="/images/menu-dark.svg" />
+            <img class="close hidden" id="close" alt="close menu" src="/images/close-dark.svg" />
+        </div>
+        <ul class="nav-link-container collapsed" id="mobile-menu">
+            <a href="/index.html"><li class="nav-link" id="project-template-nav-link">Home</li></a>
+            <a href="/resume.html"><li class="nav-link" id="project-template-nav-link">Resume</li></a>
+            <a href="https://www.codey.design/" target="_blank"><li class="nav-link" id="project-template-nav-link">Design</li></a>
+            <a href="/contact.html"><li class="nav-link" id="project-template-nav-link">Contact</li></a>
+        </ul>
+    </nav>
+
+
+    <section class="project">
+
+        <div class="left">
+            <article class="write-up">
+                <h1 class="code-text">Project Title</h1>
+                <p>Project description</p>
+            </article>
+        </div>
+
+        <div class="right dark-bg">
+            <div class="preview"></div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

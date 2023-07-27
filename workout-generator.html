@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <link href="/workout-generator-styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="/typing-animation.js" async></script>
+    <script type="text/javascript" src="/workout-generator-scripts.js" async></script>
+    <script type="text/javascript" src="/mobile-nav-menu.js" async></script>
+    <title>Workout Generator</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html"><img class="nav-logo" alt="Codey Design Inc Logo" src="/images/dark-logo.svg"/></a>
+        <div class="mobile-menu-btn-container"  onclick="menuToggle()">
+            <img class="hamburger" id="hamburger" alt="menu" src="/images/menu-dark.svg" />
+            <img class="close hidden" id="close" alt="close menu" src="/images/close-dark.svg" />
+        </div>
+        <ul class="nav-link-container collapsed" id="mobile-menu">
+            <a href="/index.html"><li class="nav-link" id="project-template-nav-link">Home</li></a>
+            <a href="/resume.html"><li class="nav-link" id="project-template-nav-link">Resume</li></a>
+            <a href="https://www.codey.design/" target="_blank"><li class="nav-link" id="project-template-nav-link">Design</li></a>
+            <a href="/contact.html"><li class="nav-link" id="project-template-nav-link">Contact</li></a>
+        </ul>
+    </nav>
+
+
+    <section class="project">
+
+        <div class="left">
+            <article class="write-up">
+                <h1 class="code-text">Random Workout Generator</h1>
+                <p>I work out 4 - 6 days per week, depending on the season. Over the last 12 years or so, I’ve done every type of workout. I’ve trained for triathlons. I’ve done cross fit. I’ve practiced functional mobility training. I’ve body-built. </p>
+                <p>A deep yearn for understanding workout theory constitutes the one commonality among my various training types. No matter what kind of exercise I do, I really strive to understand the theory behind it: </p>
+                <ul>
+                    <li>What exercises does this training type include?</li>
+                    <li>What muscles does each of these exercises target?</li>
+                    <li>How frequently can I train those muscles?</li>
+                    <li>Is there a special form or technique I should keep in mind?</li>
+                </ul>
+                <p>So, anyway, I’ve studied body building really hard. I have a pretty good idea how to get the physique I want. But I occasionally hit some road blocks in my training routine.</p>
+                <ol>
+                    <li>Sometimes I get bored or uninspired when designing my workouts. Of all the exercises I’m familiar with, none sound fun or exciting.</li>
+                    <li>Sometimes I forget about some really good exercises, simply because there’s a million ways to target each muscle group.</li>
+                    <li>Sometimes I get stuck in a rut, favoring only a few exercises when (like I said before) there can be a million ways to target each muscle group.</li>
+                </ol>
+                <p>So I designed a workout generator. You can enter which muscle groups you’d like to target today and you get a workout tailored to your desires. Not only does it generate a science-backed workout designed to build strength while preventing injury, but it also spits out a good chunk of workout theory. So you can understand why each exercise was chosen and how to perform the exercises. The next step on this project is to add a link to a youtube how-to for each exercise. I also want to add the ability to hide the theory / explanations for advanced users who don't need the biology lessons.</p>
+            </article>
+        </div>
+
+        <div class="right dark-bg">
+            <div class="preview content">
+              
+                <!-- There will be two screens: the pre-workout, where you choose your workout,  and the generated-workout, where your generated workout is displayed. -->
+                
+                <div id="pre-workout">
+        
+                    <div class="app-bar">
+        
+                        <h2>Workout Selector</h2>         
+        
+                    </div>
+        
+                    <div class="main">
+        
+                        <p class="p1">Good morning, Codey. What would you like to train today?</p>
+        
+                        <!-- These buttons allow you to choose which muscle groups you'd like to exercise -->
+                        <h3>Torso</h3>
+        
+                        <div class="muscle-group-container">
+        
+                            <div class="muscle-group rounded-corners" id="chest" onclick="generateChestWorkout()">
+                                <p class="p2">Chest</p>
+                            </div>
+                            <div class="muscle-group rounded-corners" id="back"  onclick="generateBackWorkout()">
+                                <p class="p2">Back</p>
+                            </div>
+                            <div class="muscle-group rounded-corners" id="traps"  onclick="generateTrapWorkout()">
+                                <p class="p2">Traps</p>
+                            </div>
+        
+                        </div>
+        
+                        <h3>Arms</h3>
+        
+                        <div class="muscle-group-container">
+            
+                            <div class="muscle-group rounded-corners" id="shoulders"  onclick="generateShoulderWorkout()">
+                                <p class="p2">Shoulders</p>
+                            </div>
+                            <div class="muscle-group rounded-corners" id="biceps"  onclick="generateBicepWorkout()">
+                                <p class="p2">Biceps</p>
+                            </div>
+                            <div class="muscle-group rounded-corners" id="triceps"  onclick="generateTricepWorkout()">
+                                <p class="p2">Triceps</p>
+                            </div>
+                            <div class="muscle-group rounded-corners" id="forearms"  onclick="generateForearmWorkout()">
+                                <p class="p2">Forearms</p>
+                            </div>
+            
+                        </div>
+        
+                        <h3>Legs</h3>
+        
+                        <div class="muscle-group-container">
+            
+                            <div class="muscle-group rounded-corners" id="upper" onclick="generateUpperLegWorkout()">
+                                <p class="p2">Upper</p>
+                            </div>
+                            <div class="muscle-group rounded-corners" id="calves" onclick="generateCalfWorkout()">
+                                <p class="p2">Calves</p>
+                            </div>
+            
+                        </div>
+        
+                        <button class="generate-btn rounded-corners" onclick="slideLeft()">
+                            Generate Workout
+                        </button>
+        
+                    </div>
+        
+                </div>
+            
+                <!-- Now for the screen that pulls from the right with your generated workout -->
+                <div id="generated-workout">
+        
+                    <div class="app-bar">
+        
+                    <div class="back-btn" onclick="slideRight()">
+                        &#10094;
+                    </div>
+                    <h2>Today's Workout</h2>         
+        
+                    </div>
+        
+                    <div class="main">
+        
+                    <p class="p1">Here's today's workout. Break a sweat, and don't forget to enjoy yourself!</p>
+        
+                    <div class="full-warmup">
+                        <h3>Full-Body Warmup</h3>
+                        <p class="p3">It's best to get a nice sweat going before doing any heavy lifting. So let's start off with a quick full-body warm up.</p>
+                        <ul>
+                            <li id="warmup"></li>
+                        </ul>
+                    </div>
+        
+                    <div class="hidden display" id="chest-display">
+        
+                        <h3>Chest</h3>
+                        <p class="p3 description">The chest (Pectoralis Majors) consists of three target areas: The Upper, the Mid, and the Lower. The mid chest will be recruited no matter what chest exercise you do, but dedicating time to specifically develop your upper chest and lower chest will build uniform definition across your pecs.</p>
+                        <ul>
+                            <li><strong>Warm Up:</strong> <a id="chest-warmup"></a></li>
+                            <li><strong>Upper Chest:</strong> <a id="chest-upper"></a></li>
+                            <li><strong>Mid Chest:</strong> <a id="chest-mid"></a></li>
+                            <li><strong>Lower Chest:</strong> <a id="chest-lower"></a></li>
+                        </ul>
+        
+                    </div>
+        
+                    <div class="hidden display" id="back-display">
+        
+                        <h3>Back</h3>
+                        <p class="description p3">Your back is a complicated area with lots of small muscles, each fine-tuned for specific tasks and movements. Typically, however, when a bodybuilder refers to "back exercises," they're talking about exercises that specifically target your Latissimus Dorsi (the lats). The Primary Lat Exercises will widen your lats, while the Secondary Lat Exercises focus more on definition. The middle back exercises provide strength and depth to the lats. Good posture starts with a strong lower back, so I've made sure to include some lower back exercises as well.</p>
+                        <ul>
+                            <li><strong>Warm Up:</strong> <a id="back-warmup"></a></li>
+                            <li><strong>Primary Lat Exercise:</strong> <a id="lat-primary"></a></li>
+                            <li><strong>Mid Back:</strong> <a id="back-mid"></a></li>
+                            <li><strong>Secondary Lat Exercise:</strong> <a id="lat-secondary"></a></li>
+                            <li><strong>Lower Back:</strong> <a id="back-lower"></a></li>
+                        </ul>
+        
+                    </div>
+        
+                    <div class="hidden display" id="traps-display">
+        
+                    <h3>Traps</h3>
+                    <p class="description p3">The Trapezius (traps) muscle supports your spine, helps with posture, and assists in the movement of your shoulder blades. Most novice body builders work only the upper traps, but it's important to exercise all three regions of the traps; overdevelepment of the upper traps leads to a "caveman hunch." On the other hand, underdevelopment of the traps can leave you with a weak back and slumping posture as well. A happy medium is to train all three regions of the traps for strength once per week, remaining careful not to over-do it.</p>
+                    <ul>
+                        <li><strong>Warm Up:</strong> <a id="traps-warmup"></a></li>
+                        <li><strong>Upper Traps:</strong> <a id="traps-upper"></a></li>
+                        <li><strong>Mid Traps:</strong> <a id="traps-mid"></a></li>
+                        <li><strong>Lower Traps:</strong> <a id="traps-lower"></a></li>
+                    </ul>
+        
+                    </div>
+        
+                    <div class="hidden display" id="shoulders-display">
+        
+                        <h3>Shoulders</h3>
+                        <p class="description p3">The majority of lifters do not train their shoulders properly. Most of them perform strictly strengthening exercises and thus their gains are restricted to anterior deltoid definition. This contributes to a forward hunch and a one-dimensional shoulder. Check out <a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffitnessvolt.com%2Fwp-content%2Fuploads%2F2017%2F03%2Farnold-shoulder.jpg&f=1&nofb=1" target="_blank">Arnold Schwarzenegger</a>'s shoulders. He has massive boulders sitting atop his arms. If you want delts as majestic as Arnold's you'll need to train for strength, and also specifically target the Anterior (front) Head of the Deltoid, the Lateral (side) Head, and the Posterior (rear) Head. P.S. Don't forget to work your rotator cuffs! Strong cuffs will prevent shoulder injury and help stabilize when performing heavy lifts.</p>
+                        <ul>
+                            <li><strong>Warm Up:</strong> <a id="shoulders-warmup"></a></li>
+                            <li><strong>Shoulder Strengthener:</strong> <a id="shoulders-strength"></a></li>
+                            <li><strong>Front Head:</strong> <a id="shoulders-front"></a></li>
+                            <li><strong>Lateral Head:</strong> <a id="shoulders-lateral"></a></li>
+                            <li><strong>Rear Head:</strong> <a id="shoulders-rear"></a></li>
+                        </ul>
+        
+                    </div>
+        
+                    <div class="hidden display" id="biceps-display">
+        
+                        <h3>Biceps</h3>
+                        <p class="p3 description">The Biceps constitute another commonly mistrained muscle. We've got three target areas here. First is the Short Head, which sits on the inside part of your arm, close to your chest. The short head contributes to the overall size of your bicep. Next is the Long Head, which sits on the top of your arm. A well-defined long head will give you that coveted "bicep peak." Finally, we have the Brachialis, a slim, chronically under-trained muscle running underneath the bicep. A strong brachialis prevents bicep injury.</p>
+                        <ul>
+                            <li><strong>Warm Up:</strong> <a id="biceps-warmup"></a></li>
+                            <li><strong>Inner Head:</strong> <a id="biceps-inner"></a></li>
+                            <li><strong>Outer Head: </strong> <a id="biceps-outer"></a></li>
+                            <li><strong>Brachialis:</strong> <a id="brachialis"></a></li>
+                        </ul>
+        
+                    </div>
+        
+                    <div class="hidden display" id="triceps-display">
+        
+                        <h3>Triceps</h3>
+                        <p class="description p3">Novice body builders rarely train the triceps brachii properly, because they're not a "glamor muscle." But here's the deal: big ol' biceps look stupid next to small triceps. Balance out your arms, bro. The tricep has three heads: the Long Head (responsible for most of your tricep strength and size), the Lateral Head (activated when the elbow bends with a close grip), and the Medial Head (normally activated with a reverse grip and wider hand positioning).</p>
+                        <ul>
+                            <li><strong>Warm Up:</strong> <a id="triceps-warmup"></a></li>
+                            <li><strong>Long Head:</strong> <a id="triceps-long"></a></li>
+                            <li><strong>Lateral Head: </strong> <a id="triceps-lateral"></a></li>
+                            <li><strong>Medial Head:</strong> <a id="triceps-medial"></a></li>
+                        </ul>
+        
+                    </div>
+        
+                    <div class="hidden display" id="forearms-display">
+        
+                        <h3>Forearms</h3>
+                        <p class="description p3">The forearm has about 20 little muscles in it, all performing very fine-tuned movements. It moves in three different planes of motion: wrist flextion/extension (down and up), wrist pronation/supination (rotating your hand in a circle), and radial/ulnar deviation (moving the wrist side-to-side). Working your grip strength will increase your forearm size, while working those fine-tuned muscles will provide definition.</p>
+                        <ul>
+                            <li><strong>Grip Work:</strong> <a id="grip"></a></li>
+                            <li><strong>Definition Builder:</strong> <a id="forearm-definition"></a></li>
+                        </ul>
+        
+                    </div>
+        
+                    <div class="hidden display" id="legs-display">
+        
+                        <h3>Upper Legs</h3>
+                        <p class="description p3">I think pop culture has shamed enough people into making leg day part of their training schedule, but many folks still don't train their legs as well as they could. The upper legs consist of two main components. First is the Quadriceps Femoris, which are 4 muscles that occupy the front of your leg. I refer to these muscles as the Anterior Chain, and they all work together to help you run, jump, and squat. They also stabilize the knee joint. Second, we have the Posterior Chain, comprised of your 3 hamstring muscles, your glutes, and your biceps femoris (runs along the back of the knee).</p>
+                        <ul>
+                            <li><strong>Warm Up:</strong> <a id="legs-warmup"></a></li>
+                            <li><strong>Anterior Chain:</strong> <a id="anterior-primary"></a></li>
+                            <li><strong>Posterior Chain: </strong> <a id="posterior-primary"></a></li>
+                            <li><strong>Anterior Chain:</strong> <a id="anterior-secondary"></a></li>
+                            <li><strong>Posterior Chain: </strong> <a id="posterior-secondary"></a></li>
+                        </ul>
+        
+                    </div>
+        
+                    <div class="hidden" id="calves-display">
+        
+                        <h3>Calves</h3>
+                        <p class="description p3">Calves (which consist of the Gastrocnemius - helps with standing calf raises - and the Soleus - helps with seated calf raises). Calves don't really need warmed up too much, since every step you take when walking is like a mini single-leg calf raise. We're working our calves all day long. Place a Calf workout at the end of a leg workout and your calves will be rearing and ready to rock, no warmup required. Otherwise take a few sets of Body Weight (BW) Standing Raises to work your calves through their full range of motion before beginning.</p>
+                        <ul>
+                            <li><strong>Gastrocnemius:</strong> <a id="gastroc"></a></li>
+                            <li><strong>Soleus: </strong> <a id="soleus"></a></li>
+                        </ul>
+        
+                    </div>
+        
+                    </div>
+        
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

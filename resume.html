@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="/mobile-nav-menu.js" async></script>
+    <title>Codey Albers Dev Resume</title>
+</head>
+<body class="dark-bg">
+    
+    <nav>
+        <a href="index.html"><img class="nav-logo" alt="Codey Design Inc Logo" src="/images/logo.svg"/></a>
+        <div class="mobile-menu-btn-container"  onclick="menuToggle()">
+            <img class="hamburger" id="hamburger" alt="menu" src="/images/menu-light.svg" />
+            <img class="close hidden" id="close" alt="close menu" src="/images/close-light.svg" />
+        </div>
+        <ul class="nav-link-container collapsed" id="mobile-menu">
+            <a href="/index.html"><li class="nav-link">Home</li></a>
+            <a href="/resume.html"><li class="nav-link current">Resume</li></a>
+            <a href="https://www.codey.design/" target="_blank"><li class="nav-link">Design</li></a>
+            <a href="/contact.html"><li class="nav-link">Contact</li></a>
+        </ul>
+    </nav>
+
+    <section class="resume-container">
+        <img src="/images/codeys-resume.png" alt="A preview image of Codey's resume." class="resume-img" />
+        <button>download resume <img src="/images/file_download.svg" /></button>
+    </section>
+
+</body>
+</html>

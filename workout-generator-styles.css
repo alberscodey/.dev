@@ -1,0 +1,198 @@
+/* First, the Global Styles */
+.preview {
+   font-family: 'Poppins', sans-serif;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+.rounded-corners {
+    border-radius: 4px;
+}
+
+.main {
+    padding: 16px 16px;
+    width: 288px;
+    background: white;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #FFF
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 20px;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   color: #333;
+   margin-bottom: 8px;
+}
+
+.preview ul {
+   margin-top: -6px;
+   padding-left: 20px;
+   color: #2F80ED;
+}
+
+.preview li {
+   font-size: 14px;
+   line-height: 20px;
+   font-weight: 500;
+   letter-spacing: 0.25px;
+   padding: 2px 0;
+}
+
+a {
+   color: #5C5C5C;
+}
+
+.p1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.p2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+   font-size: 14px;
+   line-height: 20px;
+   text-align: center;
+   letter-spacing: 0.04em;
+   margin-top: 24px;
+}
+
+.p3 {
+    font-family: 'Poppins', sans-serif;
+   margin-top: 0;
+   font-size: 14px;
+   line-height: 20px;
+   letter-spacing: 0.25px;
+   color: #333;
+}
+ 
+/* Now for the Local Styles */
+/* Material Design calls this part the "App Bar" */
+.content {
+    display: flex;
+}
+
+.app-bar {
+  height: 56px;
+  padding: 0 16px;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  background: #2F80ED;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Now I'll style the buttons that allow you to choose which muscle group you want to train */
+.muscle-group-container {
+   display: flex;
+   flex-direction: row;
+   gap: 4px;
+   flex-wrap: wrap;
+   margin-bottom: 24px;
+}
+
+.muscle-group {
+   display: inline-flex;
+   width: 142px;
+   height: 44px;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+   background: white;
+   border: 2px solid #5C5C5C;
+   cursor: pointer;
+   color: #333;
+   transition-duration: 0.25s;
+}
+
+.muscle-group:hover {
+   background: #5C5C5C;
+   color: white;
+}
+
+.generate-btn {
+   margin-top: 24px;
+   height: 48px;
+   width: 288px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+   font-size: 14px;
+   line-height: 20px;
+   letter-spacing: 0.08em;
+   text-transform: uppercase;
+   color: #fff;
+   border: none;
+   background: #2F80ED;
+   cursor: pointer;
+   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+   transition-property: all;
+   transition-duration: 250ms;
+}
+
+.generate-btn:hover {
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 8px 0px rgba(0, 0, 0, 0.24);
+}
+
+.selected {
+   background: #5C5C5C;
+   color: white;
+}
+ 
+/* Now for the 2nd Screen, where the generated workout is displayed */
+#generated-workout {
+   position: relative;
+   z-index: 100;
+   transition-duration: 1s;
+}
+
+.back-btn {
+   height: 44px;
+   width: 44px;
+   margin-left: -16px;
+   font-size: 16px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   border-radius: 50%;
+   transition-duration: 0.25s;
+}
+
+.back-btn:hover {
+   background: rgba(255, 255, 255, 0.25);
+}
+ 
+.animated {
+   transform: translateX(-320px);
+}
+
+.display {
+   padding-bottom: 12px;
+}
+
+.hidden {
+   display: none;
+}
